@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vue.js"></script>
+	<script src="js/vue.min.js"></script>
+	<title>sass color code</title>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>SASS 變數色卡網頁工具</h1>
+		<hr>
+		<div class="row">
+			<div class="col-sm-3">
+				<textarea name="" id="" cols="30" rows="10" v-model="colorsetting"></textarea>
+			</div>
+			<div class="col-sm-9">
+				<ul class="row">
+					<li class="col-sm-3" v-for="card in colorcards">
+						<div class="colorcard">
+							<div class="block" :style="card.colorcss"></div>
+							<div class="info">
+						 		<div class="name">{{card.name}}</div>
+						 		<div class="colorcode">{{card.colorcode}}</div>							
+							</div>		
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
